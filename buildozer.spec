@@ -1,0 +1,46 @@
+[app]
+
+# App metadata
+title = 营养摄入计算器
+package.name = nutrienttracker
+package.domain = org.nutrienttracker
+source.dir = .
+source.include_exts = py,png,jpg,kv,atlas,json,jsonl
+
+# Entry point (Buildozer always looks for main.py)
+# Version
+version = 1.0
+
+# Requirements — pure-Python only; no native extensions needed
+requirements = python3==3.11.0,kivy==2.3.0,pillow
+
+# Android target
+android.minapi = 26
+android.api = 33
+android.ndk = 25b
+android.sdk = 33
+android.arch = arm64-v8a
+
+# Permissions — private data dir only (no external storage needed)
+android.permissions = INTERNET
+
+# Orientation
+orientation = portrait
+
+# Icons / presplash (optional; Kivy provides defaults)
+# icon.filename = %(source.dir)s/icon.png
+# presplash.filename = %(source.dir)s/presplash.png
+
+# App category
+android.gradle_dependencies =
+
+# Python-for-Android recipe paths (leave empty to use defaults)
+p4a.branch = master
+
+# Exclude files not needed in the APK
+source.exclude_dirs = outputs,__pycache__,.claude,modeling,data,evaluation
+source.exclude_patterns = *.pyc,*.pyo,*.spec,*.md,meal_input.json,intake_log.jsonl,profiles.json,dish_overrides.json
+
+[buildozer]
+log_level = 2
+warn_on_root = 1

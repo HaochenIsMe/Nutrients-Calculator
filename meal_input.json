@@ -1,0 +1,37 @@
+{
+  "foods": [
+    {
+      "name": "鸡胸肉",
+      "amount_g": 345
+    },
+    {
+      "name": "番茄汁",
+      "amount_ml": 720,
+      "serving_ml": 200,
+      "nutrients_total": {
+        "protein": 1.8,
+        "carbohydrates": 8.7,
+        "salt_equivalent": 0.45,
+        "calcium": 15,
+        "fiber": 1.5,
+        "potassium": 490
+      }
+    },
+    {
+      "name": "tofu",
+      "amount_g": 300
+    },
+    {
+      "name": "白菜",
+      "amount_g": 50
+    },
+    {
+      "name": "鸡蛋",
+      "amount_g": 25
+    },
+    {
+      "name": "面粉",
+      "amount_g": 25
+    }
+  ]
+}
