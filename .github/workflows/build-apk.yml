@@ -62,12 +62,15 @@ jobs:
           pip install --upgrade pip
           pip install 'buildozer==1.5.0' 'cython==3.0.10'
 
-      # Pre-accept Android SDK licenses using the runner's system SDK
+      # Accept all Android SDK licenses and pre-install stable build-tools
+      # This prevents buildozer from auto-selecting the RC build-tools (37-rc2)
+      # whose license cannot be auto-accepted in a non-interactive shell.
       - name: Pre-accept Android SDK licenses
         run: |
           mkdir -p ~/.android
           touch ~/.android/repositories.cfg
           yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager --licenses 2>/dev/null || true
+          $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager "build-tools;34.0.0" 2>/dev/null || true
 
       - name: Build debug APK
         run: buildozer -v android debug
