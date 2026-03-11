@@ -18,8 +18,8 @@ requirements = python3==3.11.0,kivy==2.3.0,pillow
 android.minapi = 26
 android.api = 33
 android.ndk = 25b
-android.sdk = 33
-android.arch = arm64-v8a
+android.archs = arm64-v8a
+android.accept_sdk_license = True
 
 # Permissions — private data dir only (no external storage needed)
 android.permissions = INTERNET
@@ -31,11 +31,6 @@ orientation = portrait
 # icon.filename = %(source.dir)s/icon.png
 # presplash.filename = %(source.dir)s/presplash.png
 
-# App category
-android.gradle_dependencies =
-
-# Python-for-Android recipe paths (leave empty to use defaults)
-p4a.branch = master
 
 # Exclude files not needed in the APK
 source.exclude_dirs = data,__pycache__,.claude,.buildozer,.git,.github
