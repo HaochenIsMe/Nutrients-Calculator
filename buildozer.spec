@@ -38,8 +38,8 @@ android.gradle_dependencies =
 p4a.branch = master
 
 # Exclude files not needed in the APK
-source.exclude_dirs = outputs,__pycache__,.claude,modeling,data,evaluation
-source.exclude_patterns = *.pyc,*.pyo,*.spec,*.md,meal_input.json,intake_log.jsonl,profiles.json,dish_overrides.json
+source.exclude_dirs = data,__pycache__,.claude,.buildozer,.git,.github
+source.exclude_patterns = *.pyc,*.pyo,*.spec,*.md,*.jsonl
 
 [buildozer]
 log_level = 2

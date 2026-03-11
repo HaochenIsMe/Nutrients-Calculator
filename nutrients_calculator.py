@@ -18,10 +18,10 @@ from nutrients_data import ALL_NUTRIENT_KEYS, NUTRIENTS
 from food_database import lookup_food
 
 # ── File paths ────────────────────────────────────────────────────────────────
-CWD = Path.cwd()
-MEAL_INPUT_FILE = CWD / "meal_input.json"
-INTAKE_LOG_FILE = CWD / "intake_log.jsonl"
-OUTPUTS_DIR     = CWD / "outputs"
+CWD = Path(__file__).parent
+MEAL_INPUT_FILE = CWD / "data" / "meal_input.json"
+INTAKE_LOG_FILE = CWD / "data" / "intake_log.jsonl"
+OUTPUTS_DIR     = CWD / "data" / "outputs"
 
 # ── Personal constants ────────────────────────────────────────────────────────
 # Adjust these to match your body. RDA will be recalculated for your profile.

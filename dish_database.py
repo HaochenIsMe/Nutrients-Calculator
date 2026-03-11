@@ -11,7 +11,7 @@ Override any dish via dish_overrides.json in the same directory.
 import json
 from pathlib import Path
 
-_OVERRIDES_FILE = Path(__file__).parent / "dish_overrides.json"
+_OVERRIDES_FILE = Path(__file__).parent / "data" / "dish_overrides.json"
 
 # Keys stored per dish (11 user-visible nutrients + kcal)
 DISH_NUTRIENT_KEYS = [

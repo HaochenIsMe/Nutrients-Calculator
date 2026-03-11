@@ -8,7 +8,7 @@ import uuid
 from pathlib import Path
 from typing import Any
 
-_PROFILES_FILE = Path(__file__).parent / "profiles.json"
+_PROFILES_FILE = Path(__file__).parent / "data" / "profiles.json"
 
 # ── Default profile used when no profiles exist ───────────────────────────────
 _DEFAULT_PROFILE: dict[str, Any] = {
@@ -22,7 +22,7 @@ _DEFAULT_PROFILE: dict[str, Any] = {
 }
 
 # ── Persistent state ──────────────────────────────────────────────────────────
-_profiles: dict[str, dict] = {}          # id → profile dict
+_profiles: dict[str, dict] = {}          # id → profile dict    
 _current_id: str = "default"
 
 
